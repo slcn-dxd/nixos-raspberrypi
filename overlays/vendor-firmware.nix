@@ -7,8 +7,7 @@ self: super: { # final: prev:
   # see `extra/git_hash` for a matching hash of the `raspberrypi/linux`
 
   raspberrypifw_20250915 = super.raspberrypifw.overrideAttrs (old: {
-    # this release is untagged in the upstream
-    # this the the version of the matching stable kernel from `raspberrypi/linux`
+    # https://github.com/raspberrypi/firmware/releases/tag/1.20250915
     version = "1.20250915";
     src = super.fetchFromGitHub {
       owner = "raspberrypi";
@@ -117,6 +116,30 @@ self: super: { # final: prev:
       rev = "524247ac6d8b1f4ddd53730e978a70c76a320bd6";
       hash = "sha256-rESwkR7pc5MTwIZ8PaMUPXuzxfv+jVpdRp8ijvxHGcg=";
     };
+  });
+
+  raspberrypiWirelessFirmware_20251008 = super.raspberrypiWirelessFirmware.overrideAttrs (old: {
+    version = "2025-10-02";
+    srcs = [
+      # https://github.com/RPi-Distro/bluez-firmware/commits/pios/trixie
+      # 1.2-13+rpt2 release – 20251002
+      (super.fetchFromGitHub {
+        name = "bluez-firmware";
+        owner = "RPi-Distro";
+        repo = "bluez-firmware";
+        rev = "cdf61dc691a49ff01a124752bd04194907f0f9cd";
+        hash = "sha256-35pnbQV/zcikz9Vic+2a1QAS72riruKklV8JHboL9NY=";
+      })
+      # https://github.com/RPi-Distro/firmware-nonfree/commits/trixie
+      # 20241210-1+rpt3 - 20250930
+      (super.fetchFromGitHub {
+        name = "firmware-nonfree";
+        owner = "RPi-Distro";
+        repo = "firmware-nonfree";
+        rev = "e90d6888e745eb9ee1aab098fff001edc31b95b7";
+        hash = "sha256-+MO0VOwttfTT9hX5lMmMRAaDzmWh2dFxsH/FRDTFzjs";
+      })
+    ];
   });
 
   raspberrypiWirelessFirmware_20250408 = super.raspberrypiWirelessFirmware.overrideAttrs (old: {
