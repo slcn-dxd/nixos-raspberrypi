@@ -50,18 +50,25 @@ let
   };
 
   # Linux
+  linux_v6_12_57_argsOverride = {
+    modDirVersion = "6.12.57";
+    #tag = "stable_20250916";
+    rev = "eeb70c6f6b04538507d0b9e977f25846a80abde5"; # 6.12.57 with merge from ak-rex
+    srcHash = ""; 
+  };
+
   linux_v6_12_48_argsOverride = {
     modDirVersion = "6.12.48";
     tag = "stable_20250916";
     rev = "2ae782b21ddd477b4d77fa7710cf44928157d504"; # 6.12.48 with merge from ak-rex
-    srcHash = "sha256-RcvU4jEGLvradLcK6bl1YyLYSWW3F+fVkHbrvxyrIMw="; # fix me
+    srcHash = "sha256-RcvU4jEGLvradLcK6bl1YyLYSWW3F+fVkHbrvxyrIMw=";
   };
 
   linux_v6_12_44_argsOverride = {
     modDirVersion = "6.12.44";
     tag = "unstable_20250829";
     rev = "6c61955254d5c1af6687e79b1de4db7e76c9ff68"; # 6.12.44 with merge from ak-rex
-    srcHash = "sha256-5v28FioaPYSV6HYGiJn4X+PZ7byOPDCVKZfU0JukV3A="; # fix me
+    srcHash = "sha256-5v28FioaPYSV6HYGiJn4X+PZ7byOPDCVKZfU0JukV3A=";
   };
 
   linux_v6_12_34_argsOverride = {
@@ -225,6 +232,7 @@ let
     ];
   };
 in {
+  "6_12_57" = linux_v6_12_57_argsOverride;
   "6_12_48" = linux_v6_12_48_argsOverride;
   "6_12_44" = linux_v6_12_44_argsOverride;
   "6_12_34" = linux_v6_12_34_argsOverride;
