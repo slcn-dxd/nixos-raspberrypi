@@ -52,7 +52,7 @@ let
   # Linux
   linux_v6_12_57_argsOverride = {
     modDirVersion = "6.12.57";
-    #tag = "stable_20250916";
+    tag = "unstable_20251114";
     rev = "eeb70c6f6b04538507d0b9e977f25846a80abde5"; # 6.12.57 with merge from ak-rex
     srcHash = ""; 
   };
