@@ -54,7 +54,7 @@ let
     modDirVersion = "6.12.57";
     tag = "unstable_20251114";
     rev = "eeb70c6f6b04538507d0b9e977f25846a80abde5"; # 6.12.57 with merge from ak-rex
-    srcHash = ""; 
+    srcHash = "sha256-Pw1SfiUDGdMUaHiPHheZRsYIs8Co80KMAaFiLO5tjN0="; 
   };
 
   linux_v6_12_48_argsOverride = {
