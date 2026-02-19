@@ -50,6 +50,7 @@ let
 
 in self: super: super.lib.mergeAttrsList (
   builtins.concatLists [
+    (mkLinuxFor super "6_12_67" [ "02" "3" "4" "5" ])
     (mkLinuxFor super "6_12_57" [ "02" "3" "4" "5" ])
     (mkLinuxFor super "6_12_48" [ "02" "3" "4" "5" ])
     (mkLinuxFor super "6_12_44" [ "02" "3" "4" "5" ])
