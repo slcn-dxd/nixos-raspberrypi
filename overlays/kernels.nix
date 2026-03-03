@@ -71,6 +71,13 @@ let
     srcHash = "sha256-RcvU4jEGLvradLcK6bl1YyLYSWW3F+fVkHbrvxyrIMw=";
   };
 
+  linux_v6_12_47_argsOverride = {
+    # https://github.com/raspberrypi/linux/releases/tag/stable_20250916
+    modDirVersion = "6.12.47";
+    tag = "stable_20250916";
+    srcHash = "sha256-HG8Oc04V2t54l0SOn4gKmNJWQUrZfjWusgKcWvx74H0=";
+  };
+
   linux_v6_12_44_argsOverride = {
     modDirVersion = "6.12.44";
     tag = "unstable_20250829";
